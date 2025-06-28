@@ -1,66 +1,104 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Muhammad Sohaib | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sohaib | AI Developer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+    }
+    .custom-cursor {
+      cursor: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmFjYzE1IiB3aWR0aD0iNCIgaGVpZ2h0PSI0IiB2aWV3Qm94PSIwIDAgNCA0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIxIi8+PC9zdmc+'), auto;
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <img src="profile.jpg" alt="Muhammad Sohaib" class="profile-img" />
-    <h1>Muhammad Sohaib</h1>
-    <p>Developer | AI | Cybersecurity | Ethical Hacking Enthusiast</p>
-  </header>
 
-  <nav>
-    <a href="#about"><i class="fas fa-user"></i> About</a>
-    <a href="#projects"><i class="fas fa-code"></i> Projects</a>
-    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-  </nav>
+<body class="custom-cursor">
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4" id="hero">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Hey, I'm Sohaib 👋</h1>
+    <p class="text-lg md:text-xl text-slate-400 max-w-xl" data-aos="fade-up" data-aos-delay="150">
+      I build AI-powered things that work smart, fast, and beautifully.
+    </p>
+    <div class="mt-6 flex gap-4" data-aos="fade-up" data-aos-delay="300">
+      <a href="#projects" class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-full transition">Projects</a>
+      <a href="#contact" class="border border-slate-500 text-slate-300 px-6 py-2 rounded-full hover:bg-slate-800 transition">Contact</a>
+    </div>
+  </section>
 
-  <div class="container">
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>I am <strong>Muhammad Sohaib</strong>, a developer focused on building intelligent systems with ethical AI. My main interests are in cybersecurity, AI agent architecture, and solving real-world problems with automation and creative design. I'm currently developing <strong>SONAS</strong> and <strong>Ultron</strong> — high-impact projects to build the future.</p>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-
-      <div class="project">
-        <h3>SONAS</h3>
-        <p>SONAS is a long-range WiFi solution that removes the limitations of short-range routers. It works by tunneling internet from a home network and making it securely accessible from anywhere via a private bridge (like a smart VPN with hardware).</p>
+  <!-- About Section -->
+  <section class="py-20 px-6 bg-slate-900" id="about">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-slate-400 mb-6">
+        I’m Muhammad Sohaib, an AI-focused developer who combines smart tools and vision to solve problems. I don't code everything — I design how the system thinks.
+      </p>
+      <div class="flex flex-wrap justify-center gap-2">
+        <span class="bg-slate-700 text-teal-300 px-3 py-1 rounded-full text-sm">AI Workflows</span>
+        <span class="bg-slate-700 text-teal-300 px-3 py-1 rounded-full text-sm">Cybersecurity</span>
+        <span class="bg-slate-700 text-teal-300 px-3 py-1 rounded-full text-sm">Google Scripts</span>
+        <span class="bg-slate-700 text-teal-300 px-3 py-1 rounded-full text-sm">Serverless</span>
+        <span class="bg-slate-700 text-teal-300 px-3 py-1 rounded-full text-sm">Gemini API</span>
+        <span class="bg-slate-700 text-teal-300 px-3 py-1 rounded-full text-sm">Automation</span>
       </div>
+    </div>
+  </section>
 
-      <div class="project">
-        <h3>Ultron</h3>
-        <p>Ultron is an advanced AI system designed to simulate intelligent virus-agents, enabling secure and ethical AI system testing and reinforcement learning-based automation.</p>
+  <!-- Projects Section -->
+  <section class="py-20 px-6 bg-slate-800" id="projects">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12" data-aos="fade-up">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Project Card -->
+        <div class="bg-slate-900 p-6 rounded-xl shadow-md" data-aos="fade-up">
+          <h3 class="text-xl font-semibold text-teal-400">MailMind</h3>
+          <p class="text-slate-400 mt-2">Ask questions, get AI-generated answers in your inbox. Powered by Gemini + GmailApp.</p>
+          <div class="flex gap-3 mt-4">
+            <a href="https://msohaib-dev.github.io/MailMind/" target="_blank" class="text-teal-300 underline">Live Demo</a>
+            <a href="https://github.com/msohaib-dev/MailMind" target="_blank" class="text-slate-300 underline">Code</a>
+          </div>
+        </div>
+        <!-- Project Card -->
+        <div class="bg-slate-900 p-6 rounded-xl shadow-md" data-aos="fade-up">
+          <h3 class="text-xl font-semibold text-teal-400">InFace</h3>
+          <p class="text-slate-400 mt-2">Real-time camera face scanner using AI to detect age, gender, and emotion.</p>
+          <div class="flex gap-3 mt-4">
+            <a href="https://alihaider-dev01.github.io/InFace/" target="_blank" class="text-teal-300 underline">Live Demo</a>
+            <a href="https://github.com/msohaib-dev/InFace" target="_blank" class="text-slate-300 underline">Code</a>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="project highlight">
-        <h3>MailMind <span class="badge">LIVE</span></h3>
-        <p>MailMind is a smart web tool where users can ask questions and get AI-generated answers directly in their email inbox, powered by Gemini API + GmailApp. Built using Google Apps Script.</p>
-        <p><a href="https://alihaider-dev01.github.io/mailmind/" target="_blank">🌐 Live Demo</a> | <a href="https://github.com/alihaider-dev01/mailmind" target="_blank">📂 GitHub Repo</a></p>
-      </div>
-    </section>
+  <!-- Contact Section -->
+  <section class="py-20 px-6 bg-slate-900 text-center" id="contact">
+    <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Let's Connect</h2>
+    <p class="text-slate-400 mb-6" data-aos="fade-up" data-aos-delay="150">Feel free to reach out if you want to collaborate, hire me, or just say hi.</p>
+    <div class="flex justify-center gap-6" data-aos="fade-up" data-aos-delay="300">
+      <a href="mailto:sohaib.015.m@gmail.com" class="text-teal-300 hover:underline">Email</a>
+      <a href="https://github.com/msohaib-dev" target="_blank" class="text-slate-300 hover:underline">GitHub</a>
+      <a href="https://linkedin.com/in/muhammad-sohaib-99357b323/" target="_blank" class="text-slate-300 hover:underline">LinkedIn</a>
+    </div>
+  </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:sohaib.015.m@gmail.com">sohaib.015.m@gmail.com</a></p>
-      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/alihaider-dev01" target="_blank">alihaider-dev01</a></p>
-      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/muhammad-sohaib-99357b323/" target="_blank">muhammad-sohaib</a></p>
-    </section>
-  </div>
-
-  <footer>
-    <p>© 2025 Muhammad Sohaib. All rights reserved.</p>
-    <a href="#" class="scroll-top">↑ Back to Top</a>
+  <footer class="py-4 bg-slate-950 text-center text-slate-500 text-sm">
+    © 2025 Muhammad Sohaib. All rights reserved.
   </footer>
+
+  <script>
+    AOS.init();
+  </script>
 </body>
+
 </html>
