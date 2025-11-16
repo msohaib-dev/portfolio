@@ -425,6 +425,127 @@
             transform: translateY(-3px);
         }
 
+        /* Cortex Founder Section */
+        .cortex-section {
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cortex-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .cortex-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            align-items: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .cortex-container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(6, 182, 212, 0.25);
+            border-color: rgba(6, 182, 212, 0.5);
+        }
+
+        .cortex-content h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .cortex-content .founder-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 2rem;
+            color: var(--accent);
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .cortex-content .cortex-title {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            text-shadow: 0 0 30px rgba(6, 182, 212, 0.4);
+        font-weight: 700;
+        }
+
+        .cortex-content .cortex-tagline {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            margin-bottom: 1.25rem;
+            font-weight: 500;
+        }
+
+        .cortex-content .cortex-description {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .cortex-logo-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .cortex-logo {
+            width: 280px;
+            height: auto;
+            border-radius: 1rem;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 10px 30px rgba(6, 182, 212, 0.3));
+        }
+
+        .cortex-container:hover .cortex-logo {
+            transform: scale(1.05) rotate(2deg);
+            filter: drop-shadow(0 15px 40px rgba(6, 182, 212, 0.5));
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cortex-container {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+                gap: 2rem;
+            }
+
+            .cortex-content .cortex-title {
+                font-size: 2rem;
+            }
+
+            .cortex-logo {
+                width: 220px;
+            }
+
+            .cortex-logo-wrapper {
+                order: -1;
+            }
+        }
+
+        
         /* Projects Grid */
         .projects-grid {
             display: grid;
@@ -911,6 +1032,29 @@
                     <span class="chip">Linux</span>
                     <span class="chip">Zpier/Pabbly Connect</span>
                     <span class="chip">Firebase</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cortex Founder Section -->
+    <section class="cortex-section">
+        <div class="container">
+            <div class="cortex-container">
+                <div class="cortex-content">
+                    <h2>Founder & Creator</h2>
+                    <span class="founder-badge">Building The Future of Cybersecurity</span>
+                    
+                    <h3 class="cortex-title">CORTEX</h3>
+                    <p class="cortex-tagline">AI-Powered Security Operations Center</p>
+                
+                    <p class="cortex-description">
+                        Cortex is an autonomous AI-driven SOC that helps businesses protect themselves and defend against daily hacking threats. An intelligent security system that continuously monitors, detects threats, takes automated action, and protects your infrastructure—24/7, without human intervention.
+                    </p>
+                </div>
+            
+                <div class="cortex-logo-wrapper">
+                    <img src="https://i.ibb.co/6ckR1WFn/Cortex.jpg" alt="Cortex AI SOC" class="cortex-logo">
                 </div>
             </div>
         </div>
